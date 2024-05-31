@@ -12,53 +12,65 @@
 </head>
 
 <body>
+    <!--PC header -->
+    <header class="header-fixed">
+        <div class="content">
+            <nav class="navbar">
+                <label for="menu-checkbox" class="toggle-menu" style="    cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </label>
+                <img class="logo" src="./assets/img/logo.svg" alt="Benisk.">
+                <ul id="pc-nav">
+                    <li>
+                        <a href="#!">Home</a>
+                    </li>
+                    <li>
+                        <a href="#!">Features</a>
+                    </li>
+                    <li>
+                        <a href="#!">Services</a>
+                    </li>
+                    <li>
+                        <a href="#!">Resources</a>
+                    </li>
+                    <li>
+                        <a href="#!">Contact</a>
+                    </li>
+                    <li class="show-on-mobile separate">
+                        <a href="#!">Sign in</a>
+                    </li>
+                    <li class="show-on-mobile">
+                        <a href="#!">Sign up</a>
+                    </li>
+                </ul>
+                <div class="actions">
+                    <a href="#!" class="action-link">Sign in</a>
+                    <a href="#!" class="btn">Sign up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Table & mobile header -->
+    <header class="toggle-header">
+        <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+        <!-- overlay -->
+        <label for="menu-checkbox" class="menu-overlay">
+        </label>
+        <!-- menu content -->
+        <div class="menu-drawer">
+            <img class="logo" src="./assets/img/logo.svg" alt="Benisk.">
+            <ul id="mobile-nav"></ul>
+            <script>
+                const pcNav = document.querySelector("#pc-nav");
+                const mobileNav = document.querySelector("#mobile-nav");
+                mobileNav.innerHTML = pcNav.innerHTML;
+            </script>
+        </div>
+    </header>
     <main>
-        <!--PC header -->
-        <header class="header-fixed">
-            <div class="content">
-                <nav class="navbar">
-                    <label for="menu-checkbox" class="toggle-menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path fill="currentColor"
-                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-                        </svg>
-                    </label>
-                    <img class="logo" src="./assets/img/logo.svg" alt="Benisk.">
-                    <ul>
-                        <li>
-                            <a href="#!">Home</a>
-                        </li>
-                        <li>
-                            <a href="#!">Features</a>
-                        </li>
-                        <li>
-                            <a href="#!">Services</a>
-                        </li>
-                        <li>
-                            <a href="#!">Resources</a>
-                        </li>
-                        <li>
-                            <a href="#!">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="actions">
-                        <a href="#!" class="action-link">Sign in</a>
-                        <a href="#!" class="btn">Sign up</a>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <!-- Table & mobile header -->
-        <header class="toggle-header">
-            <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
-            <!-- overlay -->
-            <label for="menu-checkbox" class="menu-overlay">
-            </label>
-            <!-- menu content -->
-            <div class="menu-drawer">
-
-            </div>
-        </header>
         <!-- hero -->
         <div class="header-wrap">
             <div class="content">
@@ -71,7 +83,8 @@
                             Discover a place you'll love to live.
                         </h1>
                         <p class="desc">
-                            Get the best real estate deals first, before they hit the mass market! HOT FORECLOSURE DEALS
+                            Get the best real estate deals first, before they hit the mass market! HOT FORECLOSURE
+                            DEALS
                             with one simple search.
                         </p>
                         <a href="#!" class="btn hero-cta">
@@ -230,7 +243,7 @@
                         <img src="./assets/img/catia-dombaxe-vfH8PXRNDTA-unsplash.jpg"
                             alt="You’ve found a neighborhood you love." class="image">
                         <div class="stats-trend">
-                            <div class="row">
+                            <div class="row ">
                                 <strong class="value">40,000+</strong>
                                 <img src="./assets/img/arrow-trend-up.svg" alt="" class="icon">
                             </div>
@@ -290,7 +303,8 @@
                     </div>
                     <div class="info">
                         <h2 class="sub-title">You’ve found a neighborhood you love.</h2>
-                        <p class="desc">When you own a home, you’re committing to living in one location for a while. In
+                        <p class="desc">When you own a home, you’re committing to living in one location for a
+                            while. In
                             a recent Trulia survey, we found that five out of six respondents said finding the right
                             neighborhood</p>
                     </div>
@@ -326,90 +340,90 @@
                 </div>
             </div>
         </div>
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="content">
-                <div class="row">
-                    <!-- column 1 -->
-                    <div class="column">
-                        <h3 class="sub-title">Product</h3>
-                        <ul style="margin-top: 42px;">
-                            <li>
-                                <a href="#!">Listing</a>
-                            </li>
-                            <li>
-                                <a href="#!">Property</a>
-                            </li>
-                            <li>
-                                <a href="#!">Agents</a>
-                            </li>
-                            <li>
-                                <a href="#!">Blog</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- column 2 -->
-                    <div class="column">
-                        <h3 class="sub-title">Resources</h3>
-                        <ul style="margin-top: 42px;">
-                            <li>
-                                <a href="#!">Our Homes</a>
-                            </li>
-                            <li>
-                                <a href="#!">Member Stories</a>
-                            </li>
-                            <li>
-                                <a href="#!">Video</a>
-                            </li>
-                            <li>
-                                <a href="#!">Free trial</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- column 3 -->
-                    <div class="column">
-                        <h3 class="sub-title">Company</h3>
-                        <ul style="margin-top: 42px;">
-                            <li>
-                                <a href="#!">Partnerships</a>
-                            </li>
-                            <li>
-                                <a href="#!">Terms of use</a>
-                            </li>
-                            <li>
-                                <a href="#!">Privacy</a>
-                            </li>
-                            <li>
-                                <a href="#!">Sitemap</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- column 4 -->
-                    <div class="column">
-                        <h3 class="sub-title">Get in touch</h3>
-                        <p class="desc">
-                            You’ll find your next home, in any style you prefer.
-                        </p>
-                        <div class="social">
-                            <a href="#!" class="social-link">
-                                <img src="./assets/img/facebook.svg" alt="">
-                            </a>
-                            <a href="#!" class="social-link">
-                                <img src="./assets/img/twitter.svg" alt="">
-                            </a>
-                            <a href="#!" class="social-link">
-                                <img src="./assets/img/linkedin.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content">
+            <div class="row">
+                <!-- column 1 -->
+                <div class="column">
+                    <h3 class="sub-title">Product</h3>
+                    <ul style="margin-top: 42px;">
+                        <li>
+                            <a href="#!">Listing</a>
+                        </li>
+                        <li>
+                            <a href="#!">Property</a>
+                        </li>
+                        <li>
+                            <a href="#!">Agents</a>
+                        </li>
+                        <li>
+                            <a href="#!">Blog</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="row">
-                    <img src="" alt="">
-                    <p class="desc"></p>
+                <!-- column 2 -->
+                <div class="column">
+                    <h3 class="sub-title">Resources</h3>
+                    <ul style="margin-top: 42px;">
+                        <li>
+                            <a href="#!">Our Homes</a>
+                        </li>
+                        <li>
+                            <a href="#!">Member Stories</a>
+                        </li>
+                        <li>
+                            <a href="#!">Video</a>
+                        </li>
+                        <li>
+                            <a href="#!">Free trial</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- column 3 -->
+                <div class="column">
+                    <h3 class="sub-title">Company</h3>
+                    <ul style="margin-top: 42px;">
+                        <li>
+                            <a href="#!">Partnerships</a>
+                        </li>
+                        <li>
+                            <a href="#!">Terms of use</a>
+                        </li>
+                        <li>
+                            <a href="#!">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="#!">Sitemap</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- column 4 -->
+                <div class="column">
+                    <h3 class="sub-title">Get in touch</h3>
+                    <p class="desc">
+                        You’ll find your next home, in any style you prefer.
+                    </p>
+                    <div class="social">
+                        <a href="#!" class="social-link">
+                            <img src="./assets/img/facebook.svg" alt="">
+                        </a>
+                        <a href="#!" class="social-link">
+                            <img src="./assets/img/twitter.svg" alt="">
+                        </a>
+                        <a href="#!" class="social-link">
+                            <img src="./assets/img/linkedin.svg" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </main>
+            <div class="row">
+                <img src="" alt="">
+                <p class="desc"></p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
